@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const Tasks = [
+  { id: 1, task: "Complete report", priority: "High" },
+  { id: 2, task: "Attend team meeting", priority: "Medium" },
+  { id: 3, task: "Respond to emails", priority: "Low" },
+  { id: 4, task: "Prepare presentation", priority: "High" },
+  { id: 5, task: "Update website", priority: "Medium" },
+  { id: 6, task: "Review code", priority: "High" },
+  { id: 7, task: "Organize files", priority: "Low" }
+];
+
+
+    console.log("The Orignal Tasks....")
+
+
+    console.log(Tasks);
+
+    Tasks.splice(0,0,{id:0,desc:"Completing the tasks",priority:"low"});
+    console.log("The Updated Tasks....")
+    console.log(Tasks);
+
+
+    Tasks.pop();
+    console.log("The Updated Tasks After popping The Last Task....")
+    console.log(Tasks);
+
+
+    Tasks.pop(1);
+    console.log("The Updated Tasks After popping The 1st position Task....")
+    console.log(Tasks);
+
+
+    Tasks.slice(0,4);
+    console.log("The Updated Tasks After Retriving The Subset From Task....")
+    console.log(Tasks);
+
+        
+    var HighPriority=Tasks.filter(elem =>(elem.priority == "High"));
+    console.log("The Tasks With High Priority....");
+    console.log(HighPriority);
+
+
+    console.log("Display The Tasks....");
+    console.log(Tasks);
+
+    
+
+    Tasks.splice(2,1,{id:3,desc:"Cleaning Garden",priority:"low"});
+    console.log("The Tasks After the Update....");
+    console.log(Tasks);
+
+
+    </script>
+</body>
+</html>
